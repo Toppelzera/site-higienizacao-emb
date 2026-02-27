@@ -1,0 +1,21 @@
+/* Gera a linha abaixo do texto */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 0;
+    background-color: oklch(54.6% 0.245 262.881);
+    transition: width 0.3s ease-in-out;
+}
+
+/* Expande ao passar o mouse */
+.nav-link:hover::after {
+    width: 100%;
+}
+
